@@ -2,11 +2,11 @@
 # Path to your locally stored model - using word2vec tpy model on a movie
 # review corpus for testing. Model created based on these instructions:
 # https://streamhacker.com/2014/12/29/word2vec-nltk/
-MODEL_PATH='../models/movies.bin'
+MODEL_PATH='../models/google_news.bin'
 
 # Give your model a name so you can distinguish results
 # obtained with different models
-MODEL_NAME='word2vec_movies'
+MODEL_NAME='google_news'
 
 # Model type:
 # word2vec models (created with gensim): w2v
@@ -28,7 +28,7 @@ MODEL_TYPE='w2v'
 ### download test model
 
 # Create a toymodel for testing the code:
-python create_toy_model.py
+# python create_toy_model.py
 
 
 ### Select data
@@ -44,7 +44,7 @@ python select_data.py is_dangerous
 # and test splits availabel in ../data/blackbox_polysemy_splits/.
 # For testing, we copy the animal-food shift data into the ../data/experiment/
 # directory:
-cp -r ../data/blackbox_polysemy_splits/poly_is_an_animal*.txt ../data/experiment/.
+# cp -r ../data/blackbox_polysemy_splits/poly_is_an_animal*.txt ../data/experiment/.
 
 #### standard experiments
 
@@ -54,10 +54,10 @@ cp -r ../data/blackbox_polysemy_splits/poly_is_an_animal*.txt ../data/experiment
 
 
 # NN
-python nearest_neighbors.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE 100 1000 100 all loo
+# python nearest_neighbors.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE 100 200 100 all loo
 
 # LR
-python logistic_regression.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE all loo
+# python logistic_regression.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE all loo
 
 # Neural Net
 python neural_net.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE all shuffle loo
@@ -70,31 +70,31 @@ python neural_net.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE all shuffle loo
 
 
 # NN
-python nearest_neighbors.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE 100 1000 100 train test
+# nearest_neighbors.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE 100 1000 100 train test
 
 # LR
-python logistic_regression.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE train test
+# python logistic_regression.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE train test
 
 # Neural Net
-python neural_net.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE train shuffle test
+# python neural_net.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE train shuffle test
 
 
 #### Evaluation
 
 python evaluation.py all loo
-python evaluation.py all test
+# python evaluation.py all test
 
 
 
 #### Cosine distances
 
 # Get cosine distances to centroid
-python get_cosines_centroid.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE all
+# python get_cosines_centroid.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE all
 
 # Get average similarities
-python get_average_cosines.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE all
+# python get_average_cosines.py $MODEL_PATH $MODEL_NAME $MODEL_TYPE all
 
 
 #### Distance analysis
 
-python create_prediction_overview.py $MODEL_NAME all
+# python create_prediction_overview.py $MODEL_NAME all

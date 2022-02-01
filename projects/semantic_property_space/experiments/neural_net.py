@@ -11,8 +11,8 @@ import glob
 # unique identifiers for different runs (because of random initialisations)
 import datetime
 
-def shuffle_examples(x, y):
 
+def shuffle_examples(x, y):
     inds = list(range(len(x)))
 
     shuffle(inds)
@@ -24,13 +24,10 @@ def shuffle_examples(x, y):
         x_shuffled.append(x[i])
         y_shuffled.append(y[i])
 
-
-
     return np.array(x_shuffled), np.array(y_shuffled), inds
 
 
-def mlp_classification_loo(x, y, shuffle = True):
-
+def mlp_classification_loo(x, y, shuffle=True):
     loo = LeaveOneOut()
     loo.get_n_splits(x)
 
@@ -39,11 +36,11 @@ def mlp_classification_loo(x, y, shuffle = True):
 
     # Recommended way of setting the nodes in the hidden layer. It is Recommended
     # to start with one hidden layer.
-    hidden_layer1_size = int(round((input +1) * (2/3), 0))
+    hidden_layer1_size = int(round((input + 1) * (2 / 3), 0))
     print('Hidden layer size: ', hidden_layer1_size)
 
     # default solver is adam, but the doc says for smaller data sets, 'lbfgs' performs better.
-    mlp = MLPClassifier(hidden_layer_sizes=(hidden_layer1_size), solver = 'lbfgs')
+    mlp = MLPClassifier(hidden_layer_sizes=(hidden_layer1_size), solver='lbfgs')
 
     predictions = []
 
@@ -78,7 +75,6 @@ def mlp_classification_loo(x, y, shuffle = True):
         for n, i in enumerate(inds_shuffled):
             mapping.append((i, predictions[n]))
 
-
         predictions_original_order = [p for i, p in sorted(mapping)]
 
         for p, po, i, n in zip(predictions, predictions_original_order, inds_shuffled, range(len(inds_shuffled))):
@@ -86,7 +82,7 @@ def mlp_classification_loo(x, y, shuffle = True):
             # check:
 
             if predictions_original_order[i] != p:
-                 print('something went wrong: ', n, po, i, p)
+                print('something went wrong: ', n, po, i, p)
 
         # additional check:
         # mapp examples back and see if the matrices are the same
@@ -100,19 +96,17 @@ def mlp_classification_loo(x, y, shuffle = True):
     return predictions_original_order
 
 
-def mlp_classification(x_train, y_train, x_test, shuffle = True):
-
-
+def mlp_classification(x_train, y_train, x_test, shuffle=True):
     input = len(x_train[0])
     print('Input size: ', input)
 
     # Recommended way of setting the nodes in the hidden layer. It is Recommended
     # to start with one hidden layer.
-    hidden_layer1_size = int(round((input +1) * (2/3), 0))
+    hidden_layer1_size = int(round((input + 1) * (2 / 3), 0))
     print('Hidden layer size: ', hidden_layer1_size)
 
     # default solver is adam, but the doc says for smaller data sets, 'lbfgs' performs better.
-    mlp = MLPClassifier(hidden_layer_sizes=(hidden_layer1_size), solver = 'lbfgs')
+    mlp = MLPClassifier(hidden_layer_sizes=(hidden_layer1_size), solver='lbfgs')
 
     predictions = []
 
@@ -128,15 +122,13 @@ def mlp_classification(x_train, y_train, x_test, shuffle = True):
         x_train_new = x_train
         y_train_new = y_train
 
-
     mlp.fit(x_train_new, y_train_new)
     predictions = mlp.predict(x_test)
 
     return predictions
 
 
-def neural_net_classification_loo(model, feature, shuffle = True):
-
+def neural_net_classification_loo(model, feature, shuffle=True):
     final_predictions = []
 
     words_pos, words_neg = load_data(feature)
@@ -165,11 +157,9 @@ def neural_net_classification_loo(model, feature, shuffle = True):
 
     y = np.array(y)
 
-
     wi_dict = merge_wi_dicts(wi_dict_pos, wi_dict_neg)
 
-    predictions = mlp_classification_loo(x, y, shuffle = shuffle)
-
+    predictions = mlp_classification_loo(x, y, shuffle=shuffle)
 
     for word in words:
 
@@ -185,10 +175,7 @@ def neural_net_classification_loo(model, feature, shuffle = True):
     return words, final_predictions
 
 
-
-
-def neural_net_classification(model, feature_train, feature_test, shuffle = True):
-
+def neural_net_classification(model, feature_train, feature_test, shuffle=True):
     final_predictions = []
 
     words_pos_train, words_neg_train = load_data(feature_train)
@@ -197,7 +184,6 @@ def neural_net_classification(model, feature_train, feature_test, shuffle = True
     vecs_neg_train, wi_dict_neg_train = load_vecs(model, words_neg_train)
     wi_dict_train = merge_wi_dicts(wi_dict_pos_train, wi_dict_neg_train)
 
-
     words_train = words_pos_train + words_neg_train
     x_train = vecs_pos_train + vecs_neg_train
     y_train = [1 for vec in vecs_pos_train]
@@ -205,13 +191,11 @@ def neural_net_classification(model, feature_train, feature_test, shuffle = True
 
     y_train = np.array(y_train)
 
-
     words_pos_test, words_neg_test = load_data(feature_test)
 
     vecs_pos_test, wi_dict_pos_test = load_vecs(model, words_pos_test)
     vecs_neg_test, wi_dict_neg_test = load_vecs(model, words_neg_test)
     wi_dict_test = merge_wi_dicts(wi_dict_pos_test, wi_dict_neg_test)
-
 
     words_test = words_pos_test + words_neg_test
     x_test = vecs_pos_test + vecs_neg_test
@@ -222,10 +206,7 @@ def neural_net_classification(model, feature_train, feature_test, shuffle = True
     x_train = to_np_array(x_train)
     x_test = to_np_array(x_test)
 
-
-
-    predictions = mlp_classification(x_train, y_train, x_test, shuffle = shuffle)
-
+    predictions = mlp_classification(x_train, y_train, x_test, shuffle=shuffle)
 
     for word in words_test:
 
@@ -240,8 +221,8 @@ def neural_net_classification(model, feature_train, feature_test, shuffle = True
 
     return words_test, final_predictions
 
-def main():
 
+def main():
     experiment_name = 'neural_net_classification'
 
     path_to_model = sys.argv[1]
@@ -253,16 +234,16 @@ def main():
 
     data = '../data/experiment/'
 
-    print( glob.glob(data+'*-pos.txt'))
+    print(glob.glob(data + '*-pos.txt'))
 
-    if (features  == 'train') and (test == 'test'):
+    if (features == 'train') and (test == 'test'):
         print('train-test')
-        features = sorted([f.split('/')[-1].split('-')[0] for f in glob.glob(data+'*_train-pos.txt')])
-        test_features = sorted([f.split('/')[-1].split('-')[0] for f in glob.glob(data+'*_test-pos.txt')])
+        features = sorted([f.split('/')[-1].split('-')[0] for f in glob.glob(data + '*_train-pos.txt')])
+        test_features = sorted([f.split('/')[-1].split('-')[0] for f in glob.glob(data + '*_test-pos.txt')])
 
     elif (features == 'all') and (test == 'loo'):
-        features = [f.split('/')[-1].split('-')[0] for f in glob.glob(data+'*-pos.txt')\
-        if (not 'train' in f) and (not 'test' in f)]
+        features = [f.split('/')[-1].split('-')[0] for f in glob.glob(data + '*-pos.txt') \
+                    if (not 'train' in f) and (not 'test' in f)]
 
     else:
         features = [features]
@@ -277,29 +258,26 @@ def main():
     elif shuffle == 'reverse':
         sh_par = 'reverse'
 
-
-
     ts = str(datetime.datetime.now()).replace(' ', '-').replace('/', '-').replace('.', '-')
-    #par = 'default-'+sh_par+'-'+ts
-
+    # par = 'default-'+sh_par+'-'+ts
 
     for no, feat in enumerate(features):
 
-        print(feat, no+1, '/', len(features))
+        print(feat, no + 1, '/', len(features))
 
         if test == 'loo':
-            par = 'default-'+sh_par+'-'+ts+'-loo'
-            words, predictions = neural_net_classification_loo(model, feat, shuffle = shuffle)
+            par = 'default-' + sh_par + '-' + ts + '-loo'
+            words, predictions = neural_net_classification_loo(model, feat, shuffle=shuffle)
             results_to_file(words, predictions, model_name, experiment_name, feat, par)
 
         else:
             feature_train = feat
             feature_test = test_features[no]
             print(feature_train, feature_test)
-            words, predictions = neural_net_classification(model, feature_train, feature_test, shuffle = shuffle)
-            par = 'default-'+sh_par+'-'+ts+'-test'
+            words, predictions = neural_net_classification(model, feature_train, feature_test, shuffle=shuffle)
+            par = 'default-' + sh_par + '-' + ts + '-test'
             results_to_file(words, predictions, model_name, experiment_name, feature_test, par)
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     main()

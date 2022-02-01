@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fc12c01d-c2f0-4d05-9cf3-2dcaaa073b0e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/analyses/word2vec_movies-poly_is_an_animal_test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/analyses/word2vec_movies-poly_is_an_animal_test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/data/experiment/is_dangerous_handgun_test-neg-all.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/data/experiment/is_dangerous_handgun_test-pos.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/data/experiment/is_dangerous_handgun_train-neg-all.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/data/experiment/is_dangerous_handgun_train-pos.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/evaluation/ci_is_dangerous.csv" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/evaluation/ci_is_dangerous.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/evaluation/is_dangerous_handgun_test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/evaluation/poly_is_an_animal_test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/experiments/load_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/experiments/load_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/experiments/neural_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/experiments/neural_net.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/experiments/run_experiments.sh" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/experiments/run_experiments.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/models/movies.bin" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/models/movies.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/cosine_distances_pairs/word2vec_movies.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/logistic_regression/default-test/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/logistic_regression/default-test/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/100-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/100-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/1000-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/1000-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/200-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/200-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/300-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/300-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/400-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/400-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/500-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/500-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/600-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/600-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/700-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/700-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/800-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/800-test/poly_is_an_animal_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/900-test/poly_is_an_animal_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projects/semantic_property_space/results/word2vec_movies/nearest_neighbors/900-test/poly_is_an_animal_test.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23xGhv0c9ppkBBISYDuvyJ8n5TG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/semantic_property_space/experiments" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/projects/semantic_property_space/experiments" />
+      <recent name="$PROJECT_DIR$/projects/semantic_property_space/models" />
+      <recent name="$PROJECT_DIR$/projects/semantic_property_space/data/experiment" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.create_final_table">
+    <configuration name="create_final_table" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="semantic_space_navigation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/semantic_property_space/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/semantic_property_space/experiments/create_final_table.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_average_cosines" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="semantic_space_navigation" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/semantic_property_space/experiments" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/projects/semantic_property_space/experiments/get_average_cosines.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_experiments.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/projects/semantic_property_space/experiments/run_experiments.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/projects/semantic_property_space/experiments" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.create_final_table" />
+        <item itemvalue="Shell Script.run_experiments.sh" />
+        <item itemvalue="Python.get_average_cosines" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc12c01d-c2f0-4d05-9cf3-2dcaaa073b0e" name="Changes" comment="" />
+      <created>1642668447997</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642668447997</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/projects/semantic_property_space/experiments/create_final_table.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
